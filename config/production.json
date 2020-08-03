@@ -1,4 +1,4 @@
 {
-  "host": "server-app.feathersjs.com",
+  "host": "https://todowebapp-f.herokuapp.com",
   "port": "PORT"
 }
