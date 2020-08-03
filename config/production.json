@@ -1,4 +1,4 @@
 {
-  "host": "https://todowebapp-f.herokuapp.com",
+  "host": "todowebapp-f.herokuapp.com",
   "port": "PORT"
 }
