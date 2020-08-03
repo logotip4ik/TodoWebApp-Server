@@ -71,7 +71,6 @@
     <script>
       const params = new URLSearchParams(window.location.hash.slice(1));
       const token = params.get('access_token');
-      console.log(token);
       if (window.opener && token){
         window.opener.postMessage({ token }, 'http://localhost:8080')
       } else {
