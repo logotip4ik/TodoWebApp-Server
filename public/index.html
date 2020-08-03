@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>A FeathersJS application</title>
+    <meta name="description" content="A FeathersJS server">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html, body {
+        font-family: 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif';
+        font-weight: 400;
+        font-size: 16px;
+        color: #2c3e50;
+      }
+
+      .center-text {
+        text-align: center;
+      }
+
+      main {
+        margin-top: 100px;
+        padding: 20px;
+      }
+
+      img.logo {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        margin-bottom: 30px;
+      }
+
+      h2 {
+        font-size: 2em;
+        font-weight: 100;
+      }
+
+      footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 20px;
+      }
+
+      footer p {
+        font-weight: 300;
+        font-size: 1.0em;
+      }
+
+      a {
+        color: #3cf;
+        text-decoration: none;
+      }
+
+      a:hover,
+      a:focus {
+        color: #3cf;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <h1>TodoApp</h1>
+      <h3 style="margin-top: 1rem;" id="info">Logging you in...</h3>
+    </main>
+    <script>
+      const params = new URLSearchParams(window.location.hash.slice(1));
+      const token = params.get('access_token');
+      console.log(token);
+      if (window.opener && token){
+        window.opener.postMessage({ token }, 'http://localhost:8080')
+      } else {
+        info.textContent= 'Go home.'
+      }
+      window.close();
+    </script>
+  </body>
+</html>
